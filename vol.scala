@@ -2,9 +2,9 @@ object cost extends App
 
 {
 
-   cost()
+   vol()
 
-  def cost(c: Float) = {
+  def vol(c: Float) = {
     print((4*22*c*c*c)/21)
   }
  
