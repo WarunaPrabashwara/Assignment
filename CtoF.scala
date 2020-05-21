@@ -1,7 +1,7 @@
 object ctof extends App
 {
   
-  CtoF(100)
+  CtoF(35)
 
 
   def CtoF(c: Float) = {
