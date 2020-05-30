@@ -1,13 +1,15 @@
-object 5 extends App{
-val a=scala.io.StdIn.readInt()
- sumeven(a) 
-k:Int=0
-    def sumeven(n: Int) = {
-      if(n>0){
-      if (n%2==0) n=n+sumeven(n-2) 
-       if(n%2==1){ sumeven(n-1)  k=1}
-if (k=1)
-print n
-else print n-a
-   } 
-  } 
+
+object q5 extends App {
+  print("enter the number to take the sum of all even numbers less than it: ")
+  var c: Int = scala.io.StdIn.readInt()
+  if (c % 2 == 0) c = c
+  else c = c - 1
+  print(sumeven(c))
+
+  def sumeven(c: Int): Int = c match {
+    case x if (x == 0) => 0
+    case x if (x >= 1) => x + sumeven(x - 2)
+    case _             => 0
+
+  }
+}
