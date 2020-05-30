@@ -1,10 +1,12 @@
-
 object q4 extends App {
-  val a = scala.io.StdIn.readInt()
-  def oddeven(n: Int): Boolean = if (n < 2) (n % 2 == 0) else (oddeven(n - 2))
+print( "enter a number to see if it is odd") 
+val a = scala.io.StdIn.readInt()
+print(isodd(a)) 
+def iseven(n:Int) :Boolean= n match {
+case 0 => true
+case _ =>isodd(n-1)
+}
+def isodd(n:Int) :Boolean	 =!(iseven(n))
 
-  if (oddeven(a) == true)
-    print("Number is even!")
-  else
-    print("Number is odd!")
+  
 }
