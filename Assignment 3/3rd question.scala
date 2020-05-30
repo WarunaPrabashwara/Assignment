@@ -1,11 +1,9 @@
-object 3 extends App{
-print "enter a positive integer" 
-val a=scala.io.StdIn.readInt()
-print sum(a) 
-    def sum(c: Int):Int = {
-      if (n != 0)
-        return n + addNumbers(n - 1)
-    else
-        return n
-  } 
+object q3 extends App{
+def sum(n:Int):Int = n match {
+     case n if (n==0) => 0
+     case n if (n>=1) => n+sum(n-1)
+     case _ => return 0 ;
 }
+print("enter a number to take the sum upto it") 
+println("sum is:" +sum(a)) ;
+} 
